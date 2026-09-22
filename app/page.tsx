@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useState } from 'react'
 
 type Stock={ticker:string;name:string;fundamental:number;narrative:number;trend:number;iv:number;call:number;mode:string;note:string}
+const APP_VERSION='V1.6'
 const base:Stock[]=[
 {ticker:'GOOG',name:'Alphabet',fundamental:94,narrative:92,trend:78,iv:76,call:88,mode:'Major Re-rating',note:'重点观察 AI / Search / Cloud 带来的预期与估值重估。'},
 {ticker:'META',name:'Meta Platforms',fundamental:93,narrative:88,trend:84,iv:72,call:87,mode:'Major Re-rating',note:'盈利能力强，重点观察估值与未来盈利预期的匹配。'},
