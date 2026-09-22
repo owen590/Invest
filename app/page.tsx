@@ -10,7 +10,7 @@ const base:Stock[]=[
 {ticker:'AMZN',name:'Amazon',fundamental:88,narrative:81,trend:73,iv:75,call:80,mode:'Ordinary opportunity',note:'关注 AWS 与利润率改善，趋势确认后再提高仓位。'},
 {ticker:'AAPL',name:'Apple',fundamental:86,narrative:70,trend:69,iv:83,call:73,mode:'Ordinary opportunity',note:'估值需要进一步进入你的低估区才值得做 Call。'},
 {ticker:'TSLA',name:'Tesla',fundamental:70,narrative:68,trend:65,iv:60,call:0,mode:'Pass',note:'按你的策略规则暂时排除：估值严重偏高。'}]
-export default function getEntryState(valuationState:string|undefined,trendState:string|undefined,mode:string){
+function getEntryState(valuationState:string|undefined,trendState:string|undefined,mode:string){
  if(mode==='Pass')return {label:'PASS',tone:'gray',reason:'模式外 / 黑名单'}
  const cheap=valuationState==='Deep Undervaluation'||valuationState==='Undervalued'
  const fair=valuationState==='Fair'
